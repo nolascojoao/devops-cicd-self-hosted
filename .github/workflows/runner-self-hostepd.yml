@@ -1,0 +1,19 @@
+name: Run script on VM
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  execute-script:
+    runs-on: self-hosted
+    steps:
+      - name: Setup SSH agent
+        uses: webfactory/ssh-agent@v0.5.3
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+      - name: Download and execute script in VM        
+        run: |
+          ssh ${{ secrets.VM_USER }}@${{ secrets.VM_IP }} "curl -fsSL https://raw.githubusercontent.com/nolascojoao/cicd-self-hosted/main/backup.sh | sudo /usr/bin/bash"
