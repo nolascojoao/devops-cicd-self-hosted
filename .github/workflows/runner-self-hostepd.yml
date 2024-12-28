@@ -16,4 +16,4 @@ jobs:
 
       - name: Download and execute script in VM        
         run: |
-          ssh ${{ secrets.VM_USER }}@${{ secrets.VM_IP }} "curl -fsSL https://raw.githubusercontent.com/nolascojoao/cicd-self-hosted/main/backup.py | sudo python3"
+          ssh ${{ secrets.VM_USER }}@${{ secrets.VM_IP }} "curl -fsSL https://raw.githubusercontent.com/nolascojoao/devops-cicd-self-hosted/main/backup.py | sudo python3"
