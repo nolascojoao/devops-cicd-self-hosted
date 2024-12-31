@@ -1,0 +1,1 @@
+Este script pode ser centralizado em um repositório e implementado como um fluxo de trabalho automatizado para gerenciar backups em múltiplos servidores. Ele facilita a reutilização e pode ser modificado para adicionar funcionalidades, como cronjobs, para execução em horários programados ou outras tarefas automatizadas.
