@@ -90,7 +90,7 @@ for file in "$TARGET_DIR"/*; do
         CREATION_DATE=$(format_date "$CREATION_DATE")
         MODIFICATION_DATE=$(format_date "$MODIFICATION_DATE")
 		
-		# Registrar no log de origem
+	# Registrar no log de origem
         log_file_info "$FILE_NAME" "$FILE_SIZE" "$CREATION_DATE" "$MODIFICATION_DATE"
 
         # Calcular diferença de dias
